@@ -16,4 +16,6 @@ ESP32 qui envoie température et humidité vers un script Python qui les enregis
 
 ## État d'avancement et observations
 * **Matériel non encore raccordé :** Le câblage physique (ESP32 + capteur SHT31) n'a pas encore été testé en conditions réelles par manque d'équipement.
+Le firmware compile sans erreur sous l'IDE Arduino (carte ESP32 Dev Module). Il n'a pas encore été testé sur le matériel réel. Le récepteur Python a été testé avec un émetteur simulé (logger/fake_sender.py).
 * **Problématique visée (synchronisation des horloges) :** Le format d'enregistrement est conçu pour comparer l'intervalle régulier de la carte (`millis_esp32`) avec l'instant de réception sur le PC (`heure_pc`), afin de mesurer concrètement la gigue (variation du délai de transmission) induite par le réseau Wi-Fi.
+
